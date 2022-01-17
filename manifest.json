@@ -1,0 +1,9 @@
+{
+  "domain": "garnet",
+  "name": "Garnet",
+  "documentation": "",
+  "dependencies": [],
+  "version": "1.0.0",
+  "codeowners": ["@claudio-pires"],
+  "requirements": []
+}
