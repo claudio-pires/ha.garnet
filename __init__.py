@@ -59,14 +59,13 @@ CONFIG_SCHEMA = vol.Schema({
 }, extra=vol.ALLOW_EXTRA)
 
 
-TIME_TILL_UNAVAILABLE = timedelta(seconds=30)
+TIME_TILL_UNAVAILABLE = timedelta(seconds=119)
 
 ID_R='\r'.encode()
 
 hass_platform = None
 
 def setup(hass, config):
-    _LOGGER.debug("Running setup...")
     
     global hass_platform
     hass_platform = hass
@@ -127,7 +126,7 @@ class Hub:
     def manage_message(self, token, data,timestamp):
 
         if(token == "NULL"):
-            _LOGGER.debug("Received Keep Alive from account " + self._accountId)
+            _LOGGER.info("Timestamp:" + timestamp + ", Keep alive, Account: " + self._accountId)
             self._states["COM"].new_state(True)
  
         else: 
@@ -156,9 +155,12 @@ class Hub:
                 _LOGGER.debug("Partition number is " + group_or_partition_number)
                 _LOGGER.debug("Zone/User number is " + zone_number_or_user_number)
 
-                _LOGGER.info("Timestamp:" + timestamp + ", " + format(self.qualifier(event_qualifier)) + ", Code:" + str(event_code) + ", Particion/Grupo:" + group_or_partition_number + ", Zona/Usuario:" + zone_number_or_user_number)
+                _LOGGER.info("Timestamp:" + timestamp + ", " + format(self.qualifier(event_qualifier)) + ", Code:" + str(event_code) + ", Particion/Grupo:" + group_or_partition_number + ", Zona/Usuario:" + zone_number_or_user_number + ", Account: " + self._accountId)
             else:
                 _LOGGER.info("Timestamp:" + timestamp + ", Token:" + token)
+                
+        for device in self._states:
+           self._states[device].assume_available()
 
     def manage_message_older(self, token):
         pos = msg.find('/')        
@@ -178,6 +180,11 @@ class Hub:
         for device in self._states:
            self._states[device].assume_available()
 
+    @staticmethod
+    def findAndAssert(str,char) :
+        x = str.find(char)               
+        assert x >= 0, "Malformed message" 
+        return x
 
 
     def process_line(self, line):
@@ -185,47 +192,47 @@ class Hub:
         strline = line.decode(errors='replace')                 # Se convierte a string para manejo eficiente
 
         # Se obtiene el token
-        start = strline.find('"')               # inicia con la primera comilla doble
-        end = strline[start + 1:].find('"')     # finaliza con la segunda comilla doble
+        start = self.findAndAssert(strline,'"')               
+        end = self.findAndAssert(strline[start + 1:],'"')               
         token = strline[start : end + 1].replace('"','')
         _LOGGER.debug("Token: " + token)
 
-        strline = strline[end + 1 : ]           # Se quita la informacion ya obtenida
+        strline = strline[end + 1 : ]           
 
         # Se obtiene el numero de secuencia
-        start = 1                               # inicia con el primer cero
-        end = strline.find('R')                 # finaliza con la R del receptor
+        start = 1                               
+        end = self.findAndAssert(strline,'R')               
         seq = strline[start: end]
         _LOGGER.debug("Sequence #: " + seq)
 
-        strline = strline[end: ]                # Se quita la informacion ya obtenida
+        strline = strline[end: ]                
 
         # Se obtiene el numero de receiver
-        start = strline.find('R')
-        end = strline.find('L')
+        start = self.findAndAssert(strline,'R')
+        end = self.findAndAssert(strline,'L')
         receiver = strline[start + 1: end]
         _LOGGER.debug("Receiver ID: " + receiver)
 
-        strline = strline[end: ]                # Se quita la informacion ya obtenida
+        strline = strline[end: ]                
 
         # Se obtiene el numero de prefijo de cuenta
-        start = strline.find('L')
-        end = strline.find('#')
+        start = self.findAndAssert(strline,'L')
+        end = self.findAndAssert(strline,'#')
         account_prefix = strline[start + 1: end]
         _LOGGER.debug("Account prefix: " + account_prefix)
 
-        strline = strline[end: ]                # Se quita la informacion ya obtenida
+        strline = strline[end: ]                
 
         # Se obtiene el bloque de datos
-        start = strline.find('[')
-        end = strline.find('_')
+        start = self.findAndAssert(strline,'[')
+        end = self.findAndAssert(strline,'_')
         data = strline[start: end]
         _LOGGER.debug("Data block: " + data)
 
-        strline = strline[end + 1: ]                # Se quita la informacion ya obtenida
+        strline = strline[end: ]                
 
         # Se obtiene el timestamp
-        start = strline.find('_')
+        start = self.findAndAssert(strline,'_')
         ts = strline[start + 1: ]
         _LOGGER.debug("Timestamp: " + ts)
 
@@ -361,11 +368,15 @@ class AlarmTCPHandler(socketserver.BaseRequestHandler):
             line  = self.request[0].strip()     # Mensaje recibido
             socket = self.request[1]            # Socket
             
+            hasNewline = line.find(b'\n')
+            if hasNewline >= 0: 
+                line = line[hasNewline + 1:] 
+            
             _LOGGER.debug("Received raw string (ASCII): " + line.decode(errors='replace'))     
             _LOGGER.debug("                    (bytes): " + format(binascii.hexlify(line)))
 
             # Se obtiene el account ID
-            accountId = line[line[2:].index(b'#') +3: line.index(b'[')].decode(errors='replace')
+            accountId = line[line[3:].index(b'#') + 4: line[3:].index(b'[') + 3].decode(errors='replace')
             _LOGGER.debug("Message from AccountId: " + accountId )     
 
             # Se obtiene el mensaje
