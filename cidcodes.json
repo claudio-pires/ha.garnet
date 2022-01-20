@@ -1,0 +1,1522 @@
+[
+  {
+    "CID": 100,
+    "Event Type": "Medical",
+    "Event Description": "A non-specific medical condition exists"
+  },
+  {
+    "CID": 101,
+    "Event Type": "Personal Emergency",
+    "Event Description": "Emergency Assistance request"
+  },
+  {
+    "CID": 102,
+    "Event Type": "Fail to report in",
+    "Event Description": "A user has failed to activate a monitoring device"
+  },
+  {
+    "CID": 110,
+    "Event Type": "Fire",
+    "Event Description": "A non-specific fire alarm condition exists"
+  },
+  {
+    "CID": 111,
+    "Event Type": "Smoke",
+    "Event Description": "An alarm has been triggered by a smoke detector"
+  },
+  {
+    "CID": 112,
+    "Event Type": "Combustion",
+    "Event Description": "An alarm has been triggered by a combustion detector"
+  },
+  {
+    "CID": 113,
+    "Event Type": "Water Flow",
+    "Event Description": "An alarm has been triggered by a water flow detector"
+  },
+  {
+    "CID": 114,
+    "Event Type": "Heat",
+    "Event Description": "An alarm has been triggered by a heat detector"
+  },
+  {
+    "CID": 115,
+    "Event Type": "Pull Station",
+    "Event Description": "A pull station has been activated"
+  },
+  {
+    "CID": 116,
+    "Event Type": "Duct",
+    "Event Description": "An alarm has been triggered by a duct detector"
+  },
+  {
+    "CID": 117,
+    "Event Type": "Flame",
+    "Event Description": "An alarm has been triggered by a flame detector"
+  },
+  {
+    "CID": 118,
+    "Event Type": "Near Alarm",
+    "Event Description": "A near-alarm condition has been detected on a fire sensor"
+  },
+  {
+    "CID": 120,
+    "Event Type": "Panic",
+    "Event Description": "A non-specific hold-up alarm exists"
+  },
+  {
+    "CID": 121,
+    "Event Type": "Duress",
+    "Event Description": "A duress code has been entered by a user"
+  },
+  {
+    "CID": 122,
+    "Event Type": "Silent",
+    "Event Description": "A silent hold-up alarm exists"
+  },
+  {
+    "CID": 123,
+    "Event Type": "Audible",
+    "Event Description": "An audible hold-up alarm exists"
+  },
+  {
+    "CID": 124,
+    "Event Type": "Duress Access granted",
+    "Event Description": "A duress code has been entered and granted at an entry door"
+  },
+  {
+    "CID": 125,
+    "Event Type": "Duress Egress granted",
+    "Event Description": "A duress code has been entered and granted at an exit door"
+  },
+  {
+    "CID": 126,
+    "Event Type": "Hold-up suspicion print",
+    "Event Description": "A user has activated a trigger to indicate a suspicious condition"
+  },
+  {
+    "CID": 130,
+    "Event Type": "Burglary",
+    "Event Description": "A burglary zone has been violated while armed"
+  },
+  {
+    "CID": 131,
+    "Event Type": "Perimeter",
+    "Event Description": "A perimeter zone has been violated while armed"
+  },
+  {
+    "CID": 132,
+    "Event Type": "Interior",
+    "Event Description": "An interior zone has been violated while armed"
+  },
+  {
+    "CID": 133,
+    "Event Type": "24 Hour (Safe)",
+    "Event Description": "A 24 hour burglary zone has been violated"
+  },
+  {
+    "CID": 134,
+    "Event Type": "Entry/Exit",
+    "Event Description": "An Entry/Exit zone has been violated while armed"
+  },
+  {
+    "CID": 135,
+    "Event Type": "Day/Night",
+    "Event Description": "An trouble by Day / alarm by Night zone has been violated while armed"
+  },
+  {
+    "CID": 136,
+    "Event Type": "Outdoor",
+    "Event Description": "An outdoor burglary zone has been violated while armed"
+  },
+  {
+    "CID": 137,
+    "Event Type": "Tamper",
+    "Event Description": "A burglary zone has been tampered with while armed"
+  },
+  {
+    "CID": 138,
+    "Event Type": "Near alarm",
+    "Event Description": "A burg sensor has detected a condition which will cause it to go into alarm if the condition worsens"
+  },
+  {
+    "CID": 139,
+    "Event Type": "Intrusion Verifier",
+    "Event Description": "The specified zone has verified that an intrusion has occurred"
+  },
+  {
+    "CID": 140,
+    "Event Type": "General Alarm",
+    "Event Description": "The specified zone is in an alarm condition"
+  },
+  {
+    "CID": 141,
+    "Event Type": "Polling loop open",
+    "Event Description": "An open circuit condition has been detected on a polling loop while the system was armed"
+  },
+  {
+    "CID": 142,
+    "Event Type": "Polling loop short",
+    "Event Description": "A short circuit condition has been detected on a polling loop while the system was armed"
+  },
+  {
+    "CID": 143,
+    "Event Type": "Expansion module failure",
+    "Event Description": "A general failure condition has been detected on an expansion module while the system was armed"
+  },
+  {
+    "CID": 144,
+    "Event Type": "Sensor tamper",
+    "Event Description": "A sensors tamper has been violated (case opened)"
+  },
+  {
+    "CID": 145,
+    "Event Type": "Expansion module tamper",
+    "Event Description": "An expansion modules tamper has been violated (cabinet opened)"
+  },
+  {
+    "CID": 146,
+    "Event Type": "Silent Burglary",
+    "Event Description": "A burglary zone has been violated while armed with no audible notification produced"
+  },
+  {
+    "CID": 147,
+    "Event Type": "Sensor Supervision Failure",
+    "Event Description": "A sensors supervisory circuit has reported a failure while the system was armed"
+  },
+  {
+    "CID": 150,
+    "Event Type": "24 Hour Non-Burglary",
+    "Event Description": "A non-burglary zone has been faulted"
+  },
+  {
+    "CID": 151,
+    "Event Type": "Gas detected",
+    "Event Description": "The gas detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 152,
+    "Event Type": "Refrigeration",
+    "Event Description": "The refrigeration detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 153,
+    "Event Type": "Loss of heat",
+    "Event Description": "The temperature detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 154,
+    "Event Type": "Water Leakage",
+    "Event Description": "The water leak detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 155,
+    "Event Type": "Foil Break",
+    "Event Description": "The specified zone which is assigned to foil used as glass break detection has reported a fault condition"
+  },
+  {
+    "CID": 156,
+    "Event Type": "Day Trouble",
+    "Event Description": "The specified zone which monitors trouble by day has reported a fault condition while disarmed"
+  },
+  {
+    "CID": 157,
+    "Event Type": "Low bottled gas level",
+    "Event Description": "The gas level detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 158,
+    "Event Type": "High temp",
+    "Event Description": "The over-temperature detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 159,
+    "Event Type": "Low temp",
+    "Event Description": "The under-temperature detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 161,
+    "Event Type": "Loss of air flow",
+    "Event Description": "The air flow detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 162,
+    "Event Type": "Carbon Monoxide detected",
+    "Event Description": "The carbon monoxide detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 163,
+    "Event Type": "Tank level",
+    "Event Description": "The tank level detector assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 200,
+    "Event Type": "Fire Supervisory",
+    "Event Description": "The supervisory circuit of the specified fire zone has reported a fault condition"
+  },
+  {
+    "CID": 201,
+    "Event Type": "Low water pressure",
+    "Event Description": "The water pressure sensor assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 202,
+    "Event Type": "Low CO2",
+    "Event Description": "The CO2 pressure sensor assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 203,
+    "Event Type": "Gate valve sensor",
+    "Event Description": "The gate valve sensor in the fire sprinkler system assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 204,
+    "Event Type": "Low water level",
+    "Event Description": "The water level sensor assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 205,
+    "Event Type": "Pump activated",
+    "Event Description": "The pump activity detector assigned to the specified zone has reported an active condition"
+  },
+  {
+    "CID": 206,
+    "Event Type": "Pump failure",
+    "Event Description": "A pump output monitor assigned to the specified zone has reported a fault condition"
+  },
+  {
+    "CID": 300,
+    "Event Type": "System Trouble",
+    "Event Description": "A general system trouble condition has been reported by the specified zone"
+  },
+  {
+    "CID": 301,
+    "Event Type": "AC Loss",
+    "Event Description": "AC power loss has been detected at a control or expansion module while the system was disarmed"
+  },
+  {
+    "CID": 302,
+    "Event Type": "Low system battery",
+    "Event Description": "A battery has failed a load test while the system was disarmed"
+  },
+  {
+    "CID": 303,
+    "Event Type": "RAM Checksum bad",
+    "Event Description": "A test of the systems memory has failed"
+  },
+  {
+    "CID": 304,
+    "Event Type": "ROM checksum bad",
+    "Event Description": "A test of the systems executable memory has failed"
+  },
+  {
+    "CID": 305,
+    "Event Type": "System reset",
+    "Event Description": "The system has reset and restarted"
+  },
+  {
+    "CID": 306,
+    "Event Type": "Panel programming changed",
+    "Event Description": "The programmed configuration of the panel has changed"
+  },
+  {
+    "CID": 307,
+    "Event Type": "Self-test failure",
+    "Event Description": "The system has failed a self-test"
+  },
+  {
+    "CID": 308,
+    "Event Type": "System shutdown",
+    "Event Description": "The system has been shut down and has stopped functioning"
+  },
+  {
+    "CID": 309,
+    "Event Type": "Battery test failure",
+    "Event Description": "The system backup battery has failed a load test while the system was disarmed"
+  },
+  {
+    "CID": 310,
+    "Event Type": "Ground fault",
+    "Event Description": "The panel has detected a ground fault condition"
+  },
+  {
+    "CID": 311,
+    "Event Type": "Battery Missing/Dead",
+    "Event Description": "The system has detected that the backup battery is either missing or completely discharged."
+  },
+  {
+    "CID": 312,
+    "Event Type": "Power Supply Overcurrent",
+    "Event Description": "The system power supply has reported an excessive current draw condition"
+  },
+  {
+    "CID": 313,
+    "Event Type": "Engineer Reset",
+    "Event Description": "The specified service person has issued a system reset"
+  },
+  {
+    "CID": 314,
+    "Event Type": "Radio battery charger failure",
+    "Event Description": "The systems primary power supply has failed a supervision test. Radio devices indicate this when the backup battery charging circuit has failed its supervision test"
+  },
+  {
+    "CID": 320,
+    "Event Type": "Sounder/Relay",
+    "Event Description": "A trouble condition exists in the systems sounder/relay circuit"
+  },
+  {
+    "CID": 321,
+    "Event Type": "Bell 1",
+    "Event Description": "A trouble condition exists in the primary bell circuit"
+  },
+  {
+    "CID": 322,
+    "Event Type": "Bell 2",
+    "Event Description": "A trouble condition exists in the secondary bell circuit"
+  },
+  {
+    "CID": 323,
+    "Event Type": "Alarm relay",
+    "Event Description": "A trouble condition exists in the systems alarm relay circuit"
+  },
+  {
+    "CID": 324,
+    "Event Type": "Trouble relay",
+    "Event Description": "A trouble condition exists in the systems trouble relay circuit"
+  },
+  {
+    "CID": 325,
+    "Event Type": "Reversing relay",
+    "Event Description": "The specified TELCO reversing relay has reported a trouble condition"
+  },
+  {
+    "CID": 326,
+    "Event Type": "Notification Appliance Ckt. # 3",
+    "Event Description": "A trouble condition exists in the bell #3 circuit"
+  },
+  {
+    "CID": 327,
+    "Event Type": "Notification Appliance Ckt. #4",
+    "Event Description": "A trouble condition exists in the bell #4 circuit"
+  },
+  {
+    "CID": 330,
+    "Event Type": "System Peripheral trouble",
+    "Event Description": "A system peripheral device has reported a trouble condition"
+  },
+  {
+    "CID": 331,
+    "Event Type": "Polling loop open",
+    "Event Description": "An open circuit condition has been detected on a polling loop while the system was disarmed"
+  },
+  {
+    "CID": 332,
+    "Event Type": "Polling loop short",
+    "Event Description": "A short circuit condition has been detected on a polling loop while the system was disarmed"
+  },
+  {
+    "CID": 333,
+    "Event Type": "Expansion module failure",
+    "Event Description": "A general failure condition has been detected on an expansion module while the system was disarmed"
+  },
+  {
+    "CID": 334,
+    "Event Type": "Repeater failure",
+    "Event Description": "A repeater in the system has reported a failure condition while the system was disarmed"
+  },
+  {
+    "CID": 335,
+    "Event Type": "Local printer out of paper",
+    "Event Description": "The printer attached to the panel has reported an Out Of Paper condition"
+  },
+  {
+    "CID": 336,
+    "Event Type": "Local printer failure",
+    "Event Description": "The printer attached to the panel has reported a failure condition"
+  },
+  {
+    "CID": 337,
+    "Event Type": "Exp. Module Power Loss",
+    "Event Description": "An expansion module has detected a DC power loss"
+  },
+  {
+    "CID": 338,
+    "Event Type": "Exp. Module Low Battery",
+    "Event Description": "An expansion module has detected a low battery condition"
+  },
+  {
+    "CID": 339,
+    "Event Type": "Exp. Module Power On / Reset",
+    "Event Description": "An expansion module has reset"
+  },
+  {
+    "CID": 341,
+    "Event Type": "Exp. Module Tamper",
+    "Event Description": "An expansion module has detected its tamper switch has been faulted"
+  },
+  {
+    "CID": 342,
+    "Event Type": "Exp. Module AC Loss",
+    "Event Description": "An expansion module has detected the loss of AC power"
+  },
+  {
+    "CID": 343,
+    "Event Type": "Exp. Module self-test fail",
+    "Event Description": "An expansion module has failed a self-test"
+  },
+  {
+    "CID": 344,
+    "Event Type": "RF Receiver Jam Detect",
+    "Event Description": "An RF receiver has detected the presence of a jamming signal which prevents it from receiving normal signalsfrom the system RF devices"
+  },
+  {
+    "CID": 350,
+    "Event Type": "Communication Path Failure",
+    "Event Description": "The system has experienced difficulties communicating with the central station"
+  },
+  {
+    "CID": 351,
+    "Event Type": "Telco 1 fault",
+    "Event Description": "The system has detected a fault on the primary dial-up line"
+  },
+  {
+    "CID": 352,
+    "Event Type": "Telco 2 fault",
+    "Event Description": "The system has detected a fault on the secondary dial-up line"
+  },
+  {
+    "CID": 353,
+    "Event Type": "Long Range Radio xmitter fault",
+    "Event Description": "A fault has been detected in the long range radio subsystem"
+  },
+  {
+    "CID": 354,
+    "Event Type": "Failure to communicate event",
+    "Event Description": "The system was unable to communicate an event to the central station"
+  },
+  {
+    "CID": 355,
+    "Event Type": "Loss of Radio ECP supervision",
+    "Event Description": "The radio has not reported in its designated supervision interval"
+  },
+  {
+    "CID": 356,
+    "Event Type": "Loss of central polling",
+    "Event Description": "The radio has detected a loss in the polling signal from its associated receiver"
+  },
+  {
+    "CID": 357,
+    "Event Type": "Long Range Radio VSWR problem",
+    "Event Description": "The Long Range Radio has reported a transmitter/antenna problem"
+  },
+  {
+    "CID": 358,
+    "Event Type": "Periodic Comm Test Fail /Restore",
+    "Event Description": "A periodic Communication path test has failed"
+  },
+  {
+    "CID": 370,
+    "Event Type": "Protection loop",
+    "Event Description": "The specified protection loop has reported a trouble condition"
+  },
+  {
+    "CID": 371,
+    "Event Type": "Protection loop open",
+    "Event Description": "The specified protection loop has reported an open-loop trouble condition"
+  },
+  {
+    "CID": 372,
+    "Event Type": "Protection loop short",
+    "Event Description": "The specified protection loop has reported a shorted-loop trouble condition"
+  },
+  {
+    "CID": 373,
+    "Event Type": "Fire trouble",
+    "Event Description": "A fire sensor has detected a trouble condition on the specified zone while the system was disarmed"
+  },
+  {
+    "CID": 374,
+    "Event Type": "Exit error alarm (zone)",
+    "Event Description": "An exit error condition has been reported for the specified alarm zone"
+  },
+  {
+    "CID": 375,
+    "Event Type": "Panic zone trouble",
+    "Event Description": "The system has detected a trouble condition on the panic zone"
+  },
+  {
+    "CID": 376,
+    "Event Type": "Hold-up zone trouble",
+    "Event Description": "The system has detected a trouble condition on the hold-up zone"
+  },
+  {
+    "CID": 377,
+    "Event Type": "Swinger Trouble",
+    "Event Description": "A fault has occurred on a zone that has been shut down due to excessive alarms"
+  },
+  {
+    "CID": 378,
+    "Event Type": "Cross-zone Trouble",
+    "Event Description": "The specified zone in a cross-zone configuration has faulted without a fault on its corresponding cross-zone ina specific time period"
+  },
+  {
+    "CID": 380,
+    "Event Type": "Sensor trouble",
+    "Event Description": "The specified sensor has reported a trouble condition"
+  },
+  {
+    "CID": 381,
+    "Event Type": "Loss of supervision - RF",
+    "Event Description": "The specified zone has failed to report in during its designated supervision period"
+  },
+  {
+    "CID": 382,
+    "Event Type": "Loss of supervision - RPM",
+    "Event Description": "An Remote Polled Module assigned to the specified zone has failed supervision"
+  },
+  {
+    "CID": 383,
+    "Event Type": "Sensor tamper",
+    "Event Description": "The tamper switch on the specified sensor has been faulted"
+  },
+  {
+    "CID": 384,
+    "Event Type": "RF low battery",
+    "Event Description": "The specified battery powered RF zone has reported a low battery condition"
+  },
+  {
+    "CID": 385,
+    "Event Type": "Smoke detector Hi sensitivity",
+    "Event Description": "A smoke detectors sensitivity level has drifted to the upper limit"
+  },
+  {
+    "CID": 386,
+    "Event Type": "Smoke detector Low sensitivity",
+    "Event Description": "A smoke detectors sensitivity level has drifted to the lower limit"
+  },
+  {
+    "CID": 387,
+    "Event Type": "Intrusion detector Hi sensitivity",
+    "Event Description": "An intrusion detectors sensitivity level has drifted to the upper limit"
+  },
+  {
+    "CID": 388,
+    "Event Type": "Intrusion detector Low sensitivity",
+    "Event Description": "An intrusion detectors sensitivity level has drifted to the lower limit"
+  },
+  {
+    "CID": 389,
+    "Event Type": "Sensor self-test failure",
+    "Event Description": "The specified sensor has failed a self-test"
+  },
+  {
+    "CID": 391,
+    "Event Type": "Sensor Watch trouble",
+    "Event Description": "A motion sensor has not been triggered within a pre-defined time interval"
+  },
+  {
+    "CID": 392,
+    "Event Type": "Drift Compensation Error",
+    "Event Description": "A smoke detector cannot automatically adjust its sensitivity"
+  },
+  {
+    "CID": 393,
+    "Event Type": "Maintenance Alert",
+    "Event Description": "The specified zone requires maintenance"
+  },
+  {
+    "CID": 394,
+    "Event Type": "CO Detector needs replacement",
+    "Event Description": "The specified Carbon Monoxide detector has reached end-of-life"
+  },
+  {
+    "CID": 400,
+    "Event Type": "Open/Close",
+    "Event Description": "The specified user has disarmed/armed the system"
+  },
+  {
+    "CID": 401,
+    "Event Type": "O/C by user",
+    "Event Description": "The specified user has disarmed/armed the system"
+  },
+  {
+    "CID": 402,
+    "Event Type": "Group O/C",
+    "Event Description": "A group of zones has been armed or disarmed"
+  },
+  {
+    "CID": 403,
+    "Event Type": "Automatic O/C",
+    "Event Description": "A partition has been automatically armed or disarmed"
+  },
+  {
+    "CID": 404,
+    "Event Type": "Late to O/C (Note: use 453 or 454 instead)",
+    "Event Description": "Late to Open or Close"
+  },
+  {
+    "CID": 405,
+    "Event Type": "Deferred O/C (Obsolete- do not use )",
+    "Event Description": "Deferred Open or Close"
+  },
+  {
+    "CID": 406,
+    "Event Type": "Cancel",
+    "Event Description": "The specified user has cancelled the previously reported alarm condition"
+  },
+  {
+    "CID": 407,
+    "Event Type": "Remote arm/disarm",
+    "Event Description": "The specified user has armed or disarmed the system from off-premises"
+  },
+  {
+    "CID": 408,
+    "Event Type": "Quick arm",
+    "Event Description": "The specified user has quick-armed the system"
+  },
+  {
+    "CID": 409,
+    "Event Type": "Keyswitch O/C",
+    "Event Description": "The specified user has armed or disarmed the system using a keyswitch"
+  },
+  {
+    "CID": 411,
+    "Event Type": "Callback request made",
+    "Event Description": "A remote site (central station) has requested the panel call it back"
+  },
+  {
+    "CID": 412,
+    "Event Type": "Successful download/access",
+    "Event Description": "The configuration data of the system has been successfully downloaded"
+  },
+  {
+    "CID": 413,
+    "Event Type": "Unsuccessful access",
+    "Event Description": "A number of failed attempts have been made to remotely access the system"
+  },
+  {
+    "CID": 414,
+    "Event Type": "System shutdown command received",
+    "Event Description": "A central station has sent a system shutdown command to the panel"
+  },
+  {
+    "CID": 415,
+    "Event Type": "Dialer shutdown command received",
+    "Event Description": "A central station has sent a dialer shutdown command to the panel"
+  },
+  {
+    "CID": 416,
+    "Event Type": "Successful Upload",
+    "Event Description": "The configuration data of the system has been successfully uploaded"
+  },
+  {
+    "CID": 421,
+    "Event Type": "Access denied",
+    "Event Description": "The access control system has denied access to the specified user"
+  },
+  {
+    "CID": 422,
+    "Event Type": "Access report by user",
+    "Event Description": ""
+  },
+  {
+    "CID": 423,
+    "Event Type": "Forced Access",
+    "Event Description": "The specified access control door has been forced open"
+  },
+  {
+    "CID": 424,
+    "Event Type": "Egress Denied",
+    "Event Description": "The access control system has denied egress to the specified user"
+  },
+  {
+    "CID": 425,
+    "Event Type": "Egress Granted",
+    "Event Description": "The access control system has granted egress for the specified user"
+  },
+  {
+    "CID": 426,
+    "Event Type": "Access Door propped open",
+    "Event Description": "The specified access control door has been held open"
+  },
+  {
+    "CID": 427,
+    "Event Type": "Access point Door Status Monitor trouble",
+    "Event Description": "The specified Access Points Door Status Monitor has reported a trouble condition to the panel"
+  },
+  {
+    "CID": 428,
+    "Event Type": "Access point Request To Exit trouble",
+    "Event Description": "The specified Access Points Request To Exit zone has reported a trouble condition to the panel"
+  },
+  {
+    "CID": 429,
+    "Event Type": "Access program mode entry",
+    "Event Description": "The access control system has been put into program mode"
+  },
+  {
+    "CID": 430,
+    "Event Type": "Access program mode exit",
+    "Event Description": "The access control system has exited program mode"
+  },
+  {
+    "CID": 431,
+    "Event Type": "Access threat level change",
+    "Event Description": "The access control systems threat level has been changed"
+  },
+  {
+    "CID": 432,
+    "Event Type": "Access relay/trigger fail",
+    "Event Description": "The specified access control output device has failed to operate properly"
+  },
+  {
+    "CID": 433,
+    "Event Type": "Access RTE shunt",
+    "Event Description": "The specified Request To Exit zone has been shunted and will no longer report activity"
+  },
+  {
+    "CID": 434,
+    "Event Type": "Access DSM shunt",
+    "Event Description": "The specified Door Status Monitor zone has been shunted and will no longer report activity"
+  },
+  {
+    "CID": 435,
+    "Event Type": "Second Person Access",
+    "Event Description": "A second person has accessed an access point conforming to Two-Man-Rule requirements"
+  },
+  {
+    "CID": 436,
+    "Event Type": "Irregular Access",
+    "Event Description": ""
+  },
+  {
+    "CID": 441,
+    "Event Type": "Armed STAY",
+    "Event Description": "The specified user has armed the system in STAY mode"
+  },
+  {
+    "CID": 442,
+    "Event Type": "Keyswitch Armed STAY",
+    "Event Description": "The specified user has armed the system in STAY mode using a keyswitch"
+  },
+  {
+    "CID": 443,
+    "Event Type": "Armed with System Trouble Override",
+    "Event Description": "The specified user has armed the system while overriding a trouble condition"
+  },
+  {
+    "CID": 450,
+    "Event Type": "Exception O/C",
+    "Event Description": "The system has been armed or disarmed outside of the configured time window"
+  },
+  {
+    "CID": 451,
+    "Event Type": "Early O/C",
+    "Event Description": "The system has been disarmed/armed by the specified user before the configured time window has started"
+  },
+  {
+    "CID": 452,
+    "Event Type": "Late O/C",
+    "Event Description": "The system has been disarmed/armed by the specified user after the configured time window has ended"
+  },
+  {
+    "CID": 453,
+    "Event Type": "Failed to Open",
+    "Event Description": "The system has failed to have been disarmed during the designated time window"
+  },
+  {
+    "CID": 454,
+    "Event Type": "Failed to Close",
+    "Event Description": "The system has failed to be armed during the designated time window"
+  },
+  {
+    "CID": 455,
+    "Event Type": "Auto-arm Failed",
+    "Event Description": "The system has failed to automatically arm itself at the designated time"
+  },
+  {
+    "CID": 456,
+    "Event Type": "Partial Arm",
+    "Event Description": "The system has been only partially armed by the specified user"
+  },
+  {
+    "CID": 457,
+    "Event Type": "Exit Error (user)",
+    "Event Description": "The specified user has made an error exiting the premises after arming the system"
+  },
+  {
+    "CID": 458,
+    "Event Type": "User on Premises",
+    "Event Description": "A user has disarmed the system after an alarm has occurred"
+  },
+  {
+    "CID": 459,
+    "Event Type": "Recent Close",
+    "Event Description": "The system had been armed within the last xx minutes"
+  },
+  {
+    "CID": 461,
+    "Event Type": "Wrong Code Entry",
+    "Event Description": ""
+  },
+  {
+    "CID": 462,
+    "Event Type": "Legal Code Entry",
+    "Event Description": ""
+  },
+  {
+    "CID": 463,
+    "Event Type": "Re-arm after Alarm",
+    "Event Description": ""
+  },
+  {
+    "CID": 464,
+    "Event Type": "Auto-arm Time Extended",
+    "Event Description": "A user has successfully requested that the system delay automatically arming"
+  },
+  {
+    "CID": 465,
+    "Event Type": "Panic Alarm Reset",
+    "Event Description": "The specified panic zone has been reset"
+  },
+  {
+    "CID": 466,
+    "Event Type": "Service On/Off Premises",
+    "Event Description": "A service person has entered or left the premises"
+  },
+  {
+    "CID": 501,
+    "Event Type": "Access reader disable",
+    "Event Description": "The credential reader on the specified access point has been disabled"
+  },
+  {
+    "CID": 520,
+    "Event Type": "Sounder/Relay Disable",
+    "Event Description": "The specified sounder or relay has been disabled"
+  },
+  {
+    "CID": 521,
+    "Event Type": "Bell 1 disable",
+    "Event Description": "The specified output for Bell 1 has been disabled"
+  },
+  {
+    "CID": 522,
+    "Event Type": "Bell 2 disable",
+    "Event Description": "The specified output for Bell 2 has been disabled"
+  },
+  {
+    "CID": 523,
+    "Event Type": "Alarm relay disable",
+    "Event Description": "The specified alarm relay has been disabled"
+  },
+  {
+    "CID": 524,
+    "Event Type": "Trouble relay disable",
+    "Event Description": "The specified trouble relay has been disabled"
+  },
+  {
+    "CID": 525,
+    "Event Type": "Reversing relay disable",
+    "Event Description": "The specified reversing relay has been disabled"
+  },
+  {
+    "CID": 526,
+    "Event Type": "Notification Appliance Ckt. # 3 disable",
+    "Event Description": "The specified output for Bell 3 has been disabled"
+  },
+  {
+    "CID": 527,
+    "Event Type": "Notification Appliance Ckt. # 4 disable",
+    "Event Description": "The specified output for Bell 4 has been disabled"
+  },
+  {
+    "CID": 531,
+    "Event Type": "Module Added",
+    "Event Description": "The specified access control module has been added to the system"
+  },
+  {
+    "CID": 532,
+    "Event Type": "Module Removed",
+    "Event Description": "The specified access control module has been removed from the system"
+  },
+  {
+    "CID": 551,
+    "Event Type": "Dialer disabled",
+    "Event Description": "The specified dialer has been disabled"
+  },
+  {
+    "CID": 552,
+    "Event Type": "Radio transmitter disabled",
+    "Event Description": "The specified radio transmitter has been disabled"
+  },
+  {
+    "CID": 553,
+    "Event Type": "Remote Upload/Download disabled",
+    "Event Description": "Remote configuration has been enabled"
+  },
+  {
+    "CID": 570,
+    "Event Type": "Zone/Sensor bypass",
+    "Event Description": "The specified zone or sensor has been bypassed"
+  },
+  {
+    "CID": 571,
+    "Event Type": "Fire bypass",
+    "Event Description": "The specified fire zone has been bypassed"
+  },
+  {
+    "CID": 572,
+    "Event Type": "24 Hour zone bypass",
+    "Event Description": "The specified 24 hour zone has been bypassed"
+  },
+  {
+    "CID": 573,
+    "Event Type": "Burg. Bypass",
+    "Event Description": "The specified burglary zone has been bypassed"
+  },
+  {
+    "CID": 574,
+    "Event Type": "Group bypass",
+    "Event Description": "A group of zones has been bypassed"
+  },
+  {
+    "CID": 575,
+    "Event Type": "Swinger bypass",
+    "Event Description": "The specified zone which has reported an excessive number of faults/restores in a short period of time has been bypassed"
+  },
+  {
+    "CID": 576,
+    "Event Type": "Access zone shunt",
+    "Event Description": "The specified zone in the access control system has been shunted and will no longer report activity"
+  },
+  {
+    "CID": 577,
+    "Event Type": "Access point bypass",
+    "Event Description": "The specified access point in the access control system has been bypassed and will allow the door to open(unsecured)"
+  },
+  {
+    "CID": 578,
+    "Event Type": "Vault Bypass",
+    "Event Description": "The specified vault zone has been bypassed"
+  },
+  {
+    "CID": 579,
+    "Event Type": "Vent Zone Bypass",
+    "Event Description": "The specified vent zone has been bypassed and will no longer report any activity"
+  },
+  {
+    "CID": 601,
+    "Event Type": "Manual trigger test report",
+    "Event Description": "A test report has been triggered manually"
+  },
+  {
+    "CID": 602,
+    "Event Type": "Periodic test report",
+    "Event Description": "A periodic test report has been triggered"
+  },
+  {
+    "CID": 603,
+    "Event Type": "Periodic RF transmission",
+    "Event Description": "A periodic RF path test report has been triggered"
+  },
+  {
+    "CID": 604,
+    "Event Type": "Fire test",
+    "Event Description": "The specified user has initiated a test of the fire alarm zones"
+  },
+  {
+    "CID": 605,
+    "Event Type": "Status report to follow",
+    "Event Description": ""
+  },
+  {
+    "CID": 606,
+    "Event Type": "Listen-in to follow",
+    "Event Description": "The system is about to activate a 2-way audio session"
+  },
+  {
+    "CID": 607,
+    "Event Type": "Walk test mode",
+    "Event Description": "The specified user has placed the system into the walk-test mode for testing purposes"
+  },
+  {
+    "CID": 608,
+    "Event Type": "Periodic test - System Trouble Present",
+    "Event Description": "A periodic test has been triggered but the fire system has a trouble condition present"
+  },
+  {
+    "CID": 609,
+    "Event Type": "Video Xmitter active",
+    "Event Description": "A video look-in session is about to begin"
+  },
+  {
+    "CID": 611,
+    "Event Type": "Point tested OK",
+    "Event Description": "The specified point tested successfully"
+  },
+  {
+    "CID": 612,
+    "Event Type": "Point not tested",
+    "Event Description": "The specified point has not been tested"
+  },
+  {
+    "CID": 613,
+    "Event Type": "Intrusion Zone Walk Tested",
+    "Event Description": "The specified intrusion zone has been successfully walk-tested"
+  },
+  {
+    "CID": 614,
+    "Event Type": "Fire Zone Walk Tested",
+    "Event Description": "The specified fire zone has been successfully walk-tested"
+  },
+  {
+    "CID": 615,
+    "Event Type": "Panic Zone Walk Tested",
+    "Event Description": "The specified panic zone has been successfully walk-tested"
+  },
+  {
+    "CID": 616,
+    "Event Type": "Service Request",
+    "Event Description": "A request has been made for system servicing"
+  },
+  {
+    "CID": 621,
+    "Event Type": "Event Log reset",
+    "Event Description": "The event log has been reset and all stored events have been discarded"
+  },
+  {
+    "CID": 622,
+    "Event Type": "Event Log 50% full",
+    "Event Description": "The event log is 50% full"
+  },
+  {
+    "CID": 623,
+    "Event Type": "Event Log 90% full",
+    "Event Description": "The event log is 90% full"
+  },
+  {
+    "CID": 624,
+    "Event Type": "Event Log overflow",
+    "Event Description": "The event log has overflowed and events have been lost"
+  },
+  {
+    "CID": 625,
+    "Event Type": "Time/Date reset",
+    "Event Description": "The time and date have been reset to a new value by the specified user"
+  },
+  {
+    "CID": 626,
+    "Event Type": "Time/Date inaccurate",
+    "Event Description": "The system time and date is known to be in error"
+  },
+  {
+    "CID": 627,
+    "Event Type": "Program mode entry",
+    "Event Description": "The system has been placed into program mode"
+  },
+  {
+    "CID": 628,
+    "Event Type": "Program mode exit",
+    "Event Description": "The system has exited program mode"
+  },
+  {
+    "CID": 629,
+    "Event Type": "32 Hour Event log marker",
+    "Event Description": "In the last 31.9 hours (1 and 1/3 days), nothing has been posted to the event log. There is nothing new toread. Does not send to central station and only occurs in the Vista-20/SE and FA sister products."
+  },
+  {
+    "CID": 630,
+    "Event Type": "Schedule change",
+    "Event Description": "The specified fire/burglary schedule has been changed"
+  },
+  {
+    "CID": 631,
+    "Event Type": "Exception schedule change",
+    "Event Description": "The time schedule for event reporting by exception has been changed"
+  },
+  {
+    "CID": 632,
+    "Event Type": "Access schedule change",
+    "Event Description": "The specified access control schedule has been changed"
+  },
+  {
+    "CID": 641,
+    "Event Type": "Senior Watch Trouble",
+    "Event Description": "A person has not activated a motion sensor in a specified period"
+  },
+  {
+    "CID": 642,
+    "Event Type": "Latch-key Supervision",
+    "Event Description": "A child has disarmed the system (after school)"
+  },
+  {
+    "CID": 651,
+    "Event Type": "Reserved for Ademco Use",
+    "Event Description": ""
+  },
+  {
+    "CID": 652,
+    "Event Type": "Reserved for Ademco Use",
+    "Event Description": ""
+  },
+  {
+    "CID": 653,
+    "Event Type": "Reserved for Ademco Use",
+    "Event Description": ""
+  },
+  {
+    "CID": 654,
+    "Event Type": "System Inactivity",
+    "Event Description": "System has not been operated for x days"
+  },
+  {
+    "CID": 655,
+    "Event Type": "User Code X modified by Installer",
+    "Event Description": "The Installer has modified the specified Users code"
+  },
+  {
+    "CID": 703,
+    "Event Type": "Auxiliary #3",
+    "Event Description": ""
+  },
+  {
+    "CID": 704,
+    "Event Type": "Installer Test",
+    "Event Description": ""
+  },
+  {
+    "CID": 750,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 751,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 752,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 753,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 754,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 755,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 756,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 757,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 758,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 759,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 760,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 761,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 762,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 763,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 764,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 765,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 766,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 767,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 768,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 769,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 770,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 771,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 772,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 773,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 774,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 775,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 776,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 777,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 778,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 779,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 780,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 781,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 782,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 783,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 784,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 785,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 786,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 787,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 788,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 789,
+    "Event Type": "User Assigned CID Message",
+    "Event Description": ""
+  },
+  {
+    "CID": 796,
+    "Event Type": "Unable to output signal (Derived Channel",
+    "Event Description": ""
+  },
+  {
+    "CID": 798,
+    "Event Type": "STU Controller down (Derived Channel)",
+    "Event Description": ""
+  },
+  {
+    "CID": 900,
+    "Event Type": "Download Abort",
+    "Event Description": "The specified Downloader ID has aborted a download sequence in progress"
+  },
+  {
+    "CID": 901,
+    "Event Type": "Download Start/End",
+    "Event Description": "Downloader has started or ended a download sequence to the panel"
+  },
+  {
+    "CID": 902,
+    "Event Type": "Download Interrupted",
+    "Event Description": "A download sequence has been interrupted"
+  },
+  {
+    "CID": 910,
+    "Event Type": "Auto-close with Bypass",
+    "Event Description": "An auto-close sequence has been started and the specified zone has been bypassed"
+  },
+  {
+    "CID": 911,
+    "Event Type": "Bypass Closing",
+    "Event Description": ""
+  },
+  {
+    "CID": 912,
+    "Event Type": "Fire Alarm Silence",
+    "Event Description": "The fire alarm has been silenced"
+  },
+  {
+    "CID": 913,
+    "Event Type": "Supervisory Point test Start/End",
+    "Event Description": "A fire supervisory device has been tested"
+  },
+  {
+    "CID": 914,
+    "Event Type": "Hold-up test Start/End",
+    "Event Description": "The specified user has started or ended a hold-up test"
+  },
+  {
+    "CID": 915,
+    "Event Type": "Burg. Test Print Start/End",
+    "Event Description": "The printed progress of a burglary test has been started or ended"
+  },
+  {
+    "CID": 916,
+    "Event Type": "Supervisory Test Print Start/End",
+    "Event Description": "The printed progress of a supervisory test has been started or ended"
+  },
+  {
+    "CID": 917,
+    "Event Type": "Burg. Diagnostics Start/End",
+    "Event Description": "A burglary system diagnostic test has been started or ended"
+  },
+  {
+    "CID": 918,
+    "Event Type": "Fire Diagnostics Start/End",
+    "Event Description": "A fire system diagnostic test has been started or ended"
+  },
+  {
+    "CID": 919,
+    "Event Type": "Untyped diagnostics",
+    "Event Description": ""
+  },
+  {
+    "CID": 920,
+    "Event Type": "Trouble Closing (closed with burg. Durin exit)",
+    "Event Description": ""
+  },
+  {
+    "CID": 921,
+    "Event Type": "Access Denied Code Unknown",
+    "Event Description": "Access has been denied because the system did not recognize the supplied access code as valid"
+  },
+  {
+    "CID": 922,
+    "Event Type": "Supervisory Point Alarm",
+    "Event Description": "The specified supervisory point has reported an alarm condition"
+  },
+  {
+    "CID": 923,
+    "Event Type": "Supervisory Point Bypass",
+    "Event Description": "The specified supervisory point has been bypassed"
+  },
+  {
+    "CID": 924,
+    "Event Type": "Supervisory Point Trouble",
+    "Event Description": "The specified supervisory point has reported a trouble condition"
+  },
+  {
+    "CID": 925,
+    "Event Type": "Hold-up Point Bypass",
+    "Event Description": "The specified hold-up point has been bypassed"
+  },
+  {
+    "CID": 926,
+    "Event Type": "AC Failure for 4 hours",
+    "Event Description": "There has been a loss of AC power for at least four hours"
+  },
+  {
+    "CID": 927,
+    "Event Type": "Output Trouble",
+    "Event Description": "The specified output has reported a trouble condition"
+  },
+  {
+    "CID": 928,
+    "Event Type": "User code for event",
+    "Event Description": "This message contains the ID of the user who triggered the previous event"
+  },
+  {
+    "CID": 929,
+    "Event Type": "Log-off",
+    "Event Description": "The specified user has logged-off of the system"
+  },
+  {
+    "CID": 954,
+    "Event Type": "Communication Failure",
+    "Event Description": "Comm fail to the primary (zone 951) or secondary (zone 952) 7810iR-ent in private LAN mode"
+  },
+  {
+    "CID": 999,
+    "Event Type": "1 and 1/3 Day No Read Log",
+    "Event Description": "In the last 31.9 hours (1 and 1/3 days), nothing has been posted to the event log. There is nothing new toread. Does not send to central station and only occurs in the Vista-20/SE and FA sister products."
+  }
+]

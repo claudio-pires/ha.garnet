@@ -1,0 +1,305 @@
+﻿CID;Event Type;Event Description
+100;Medical;A non-specific medical condition exists
+101;Personal Emergency;Emergency Assistance request
+102;Fail to report in;A user has failed to activate a monitoring device
+110;Fire;A non-specific fire alarm condition exists
+111;Smoke;An alarm has been triggered by a smoke detector
+112;Combustion;An alarm has been triggered by a combustion detector
+113;Water Flow;An alarm has been triggered by a water flow detector
+114;Heat;An alarm has been triggered by a heat detector
+115;Pull Station;A pull station has been activated
+116;Duct;An alarm has been triggered by a duct detector
+117;Flame;An alarm has been triggered by a flame detector
+118;Near Alarm;A near-alarm condition has been detected on a fire sensor
+120;Panic;A non-specific hold-up alarm exists
+121;Duress;A duress code has been entered by a user
+122;Silent;A silent hold-up alarm exists
+123;Audible;An audible hold-up alarm exists
+124;Duress Access granted;A duress code has been entered and granted at an entry door
+125;Duress Egress granted;A duress code has been entered and granted at an exit door
+126;Hold-up suspicion print;A user has activated a trigger to indicate a suspicious condition
+130;Burglary;A burglary zone has been violated while armed
+131;Perimeter;A perimeter zone has been violated while armed
+132;Interior;An interior zone has been violated while armed
+133;24 Hour (Safe);A 24 hour burglary zone has been violated
+134;Entry/Exit;An Entry/Exit zone has been violated while armed
+135;Day/Night;An trouble by Day / alarm by Night zone has been violated while armed
+136;Outdoor;An outdoor burglary zone has been violated while armed
+137;Tamper;A burglary zone has been tampered with while armed
+138;Near alarm;A burg sensor has detected a condition which will cause it to go into alarm if the condition worsens
+139;Intrusion Verifier;The specified zone has verified that an intrusion has occurred
+140;General Alarm;The specified zone is in an alarm condition
+141;Polling loop open;An open circuit condition has been detected on a polling loop while the system was armed
+142;Polling loop short;A short circuit condition has been detected on a polling loop while the system was armed
+143;Expansion module failure;A general failure condition has been detected on an expansion module while the system was armed
+144;Sensor tamper;A sensors tamper has been violated (case opened)
+145;Expansion module tamper;An expansion modules tamper has been violated (cabinet opened)
+146;Silent Burglary;A burglary zone has been violated while armed with no audible notification produced
+147;Sensor Supervision Failure;A sensors supervisory circuit has reported a failure while the system was armed
+150;24 Hour Non-Burglary;A non-burglary zone has been faulted
+151;Gas detected;The gas detector assigned to the specified zone has reported a fault condition
+152;Refrigeration;The refrigeration detector assigned to the specified zone has reported a fault condition
+153;Loss of heat;The temperature detector assigned to the specified zone has reported a fault condition
+154;Water Leakage;The water leak detector assigned to the specified zone has reported a fault condition
+155;Foil Break;The specified zone which is assigned to foil used as glass break detection has reported a fault condition
+156;Day Trouble;The specified zone which monitors trouble by day has reported a fault condition while disarmed
+157;Low bottled gas level;The gas level detector assigned to the specified zone has reported a fault condition
+158;High temp;The over-temperature detector assigned to the specified zone has reported a fault condition
+159;Low temp;The under-temperature detector assigned to the specified zone has reported a fault condition
+161;Loss of air flow;The air flow detector assigned to the specified zone has reported a fault condition
+162;Carbon Monoxide detected;The carbon monoxide detector assigned to the specified zone has reported a fault condition
+163;Tank level;The tank level detector assigned to the specified zone has reported a fault condition
+200;Fire Supervisory;The supervisory circuit of the specified fire zone has reported a fault condition
+201;Low water pressure;The water pressure sensor assigned to the specified zone has reported a fault condition
+202;Low CO2;The CO2 pressure sensor assigned to the specified zone has reported a fault condition
+203;Gate valve sensor;The gate valve sensor in the fire sprinkler system assigned to the specified zone has reported a fault condition
+204;Low water level;The water level sensor assigned to the specified zone has reported a fault condition
+205;Pump activated;The pump activity detector assigned to the specified zone has reported an active condition
+206;Pump failure;A pump output monitor assigned to the specified zone has reported a fault condition
+300;System Trouble;A general system trouble condition has been reported by the specified zone
+301;AC Loss;AC power loss has been detected at a control or expansion module while the system was disarmed
+302;Low system battery;A battery has failed a load test while the system was disarmed
+303;RAM Checksum bad;A test of the systems memory has failed
+304;ROM checksum bad;A test of the systems executable memory has failed
+305;System reset;The system has reset and restarted
+306;Panel programming changed;The programmed configuration of the panel has changed
+307;Self-test failure;The system has failed a self-test
+308;System shutdown;The system has been shut down and has stopped functioning
+309;Battery test failure;The system backup battery has failed a load test while the system was disarmed
+310;Ground fault;The panel has detected a ground fault condition
+311;Battery Missing/Dead;The system has detected that the backup battery is either missing or completely discharged.
+312;Power Supply Overcurrent;The system power supply has reported an excessive current draw condition
+313;Engineer Reset;The specified service person has issued a system reset
+314;Radio battery charger failure;The systems primary power supply has failed a supervision test. Radio devices indicate this when the backup battery charging circuit has failed its supervision test
+320;Sounder/Relay;A trouble condition exists in the systems sounder/relay circuit
+321;Bell 1;A trouble condition exists in the primary bell circuit
+322;Bell 2;A trouble condition exists in the secondary bell circuit
+323;Alarm relay;A trouble condition exists in the systems alarm relay circuit
+324;Trouble relay;A trouble condition exists in the systems trouble relay circuit
+325;Reversing relay;The specified TELCO reversing relay has reported a trouble condition
+326;Notification Appliance Ckt. # 3;A trouble condition exists in the bell #3 circuit
+327;Notification Appliance Ckt. #4;A trouble condition exists in the bell #4 circuit
+330;System Peripheral trouble;A system peripheral device has reported a trouble condition
+331;Polling loop open;An open circuit condition has been detected on a polling loop while the system was disarmed
+332;Polling loop short;A short circuit condition has been detected on a polling loop while the system was disarmed
+333;Expansion module failure;A general failure condition has been detected on an expansion module while the system was disarmed
+334;Repeater failure;A repeater in the system has reported a failure condition while the system was disarmed
+335;Local printer out of paper;The printer attached to the panel has reported an Out Of Paper condition
+336;Local printer failure;The printer attached to the panel has reported a failure condition
+337;Exp. Module Power Loss;An expansion module has detected a DC power loss
+338;Exp. Module Low Battery;An expansion module has detected a low battery condition
+339;Exp. Module Power On / Reset;An expansion module has reset
+341;Exp. Module Tamper;An expansion module has detected its tamper switch has been faulted
+342;Exp. Module AC Loss;An expansion module has detected the loss of AC power
+343;Exp. Module self-test fail;An expansion module has failed a self-test
+344;RF Receiver Jam Detect;An RF receiver has detected the presence of a jamming signal which prevents it from receiving normal signalsfrom the system RF devices
+350;Communication Path Failure;The system has experienced difficulties communicating with the central station
+351;Telco 1 fault;The system has detected a fault on the primary dial-up line
+352;Telco 2 fault;The system has detected a fault on the secondary dial-up line
+353;Long Range Radio xmitter fault;A fault has been detected in the long range radio subsystem
+354;Failure to communicate event;The system was unable to communicate an event to the central station
+355;Loss of Radio ECP supervision;The radio has not reported in its designated supervision interval
+356;Loss of central polling;The radio has detected a loss in the polling signal from its associated receiver
+357;Long Range Radio VSWR problem;The Long Range Radio has reported a transmitter/antenna problem
+358;Periodic Comm Test Fail /Restore;A periodic Communication path test has failed
+370;Protection loop;The specified protection loop has reported a trouble condition
+371;Protection loop open;The specified protection loop has reported an open-loop trouble condition
+372;Protection loop short;The specified protection loop has reported a shorted-loop trouble condition
+373;Fire trouble;A fire sensor has detected a trouble condition on the specified zone while the system was disarmed
+374;Exit error alarm (zone);An exit error condition has been reported for the specified alarm zone
+375;Panic zone trouble;The system has detected a trouble condition on the panic zone
+376;Hold-up zone trouble;The system has detected a trouble condition on the hold-up zone
+377;Swinger Trouble;A fault has occurred on a zone that has been shut down due to excessive alarms
+378;Cross-zone Trouble;The specified zone in a cross-zone configuration has faulted without a fault on its corresponding cross-zone ina specific time period
+380;Sensor trouble;The specified sensor has reported a trouble condition
+381;Loss of supervision - RF;The specified zone has failed to report in during its designated supervision period
+382;Loss of supervision - RPM;An Remote Polled Module assigned to the specified zone has failed supervision
+383;Sensor tamper;The tamper switch on the specified sensor has been faulted
+384;RF low battery;The specified battery powered RF zone has reported a low battery condition
+385;Smoke detector Hi sensitivity;A smoke detectors sensitivity level has drifted to the upper limit
+386;Smoke detector Low sensitivity;A smoke detectors sensitivity level has drifted to the lower limit
+387;Intrusion detector Hi sensitivity;An intrusion detectors sensitivity level has drifted to the upper limit
+388;Intrusion detector Low sensitivity;An intrusion detectors sensitivity level has drifted to the lower limit
+389;Sensor self-test failure;The specified sensor has failed a self-test
+391;Sensor Watch trouble;A motion sensor has not been triggered within a pre-defined time interval
+392;Drift Compensation Error;A smoke detector cannot automatically adjust its sensitivity
+393;Maintenance Alert;The specified zone requires maintenance
+394;CO Detector needs replacement;The specified Carbon Monoxide detector has reached end-of-life
+400;Open/Close;The specified user has disarmed/armed the system
+401;O/C by user;The specified user has disarmed/armed the system
+402;Group O/C;A group of zones has been armed or disarmed
+403;Automatic O/C;A partition has been automatically armed or disarmed
+404;Late to O/C (Note: use 453 or 454 instead);Late to Open or Close
+405;Deferred O/C (Obsolete- do not use );Deferred Open or Close
+406;Cancel;The specified user has cancelled the previously reported alarm condition
+407;Remote arm/disarm;The specified user has armed or disarmed the system from off-premises
+408;Quick arm;The specified user has quick-armed the system
+409;Keyswitch O/C;The specified user has armed or disarmed the system using a keyswitch
+411;Callback request made;A remote site (central station) has requested the panel call it back
+412;Successful download/access;The configuration data of the system has been successfully downloaded
+413;Unsuccessful access;A number of failed attempts have been made to remotely access the system
+414;System shutdown command received;A central station has sent a system shutdown command to the panel
+415;Dialer shutdown command received;A central station has sent a dialer shutdown command to the panel
+416;Successful Upload;The configuration data of the system has been successfully uploaded
+421;Access denied;The access control system has denied access to the specified user
+422;Access report by user; 
+423;Forced Access;The specified access control door has been forced open
+424;Egress Denied;The access control system has denied egress to the specified user
+425;Egress Granted;The access control system has granted egress for the specified user
+426;Access Door propped open;The specified access control door has been held open
+427;Access point Door Status Monitor trouble;The specified Access Points Door Status Monitor has reported a trouble condition to the panel
+428;Access point Request To Exit trouble;The specified Access Points Request To Exit zone has reported a trouble condition to the panel
+429;Access program mode entry;The access control system has been put into program mode
+430;Access program mode exit;The access control system has exited program mode
+431;Access threat level change;The access control systems threat level has been changed
+432;Access relay/trigger fail;The specified access control output device has failed to operate properly
+433;Access RTE shunt;The specified Request To Exit zone has been shunted and will no longer report activity
+434;Access DSM shunt;The specified Door Status Monitor zone has been shunted and will no longer report activity
+435;Second Person Access;A second person has accessed an access point conforming to Two-Man-Rule requirements
+436;Irregular Access; 
+441;Armed STAY;The specified user has armed the system in STAY mode
+442;Keyswitch Armed STAY;The specified user has armed the system in STAY mode using a keyswitch
+443;Armed with System Trouble Override;The specified user has armed the system while overriding a trouble condition
+450;Exception O/C;The system has been armed or disarmed outside of the configured time window
+451;Early O/C;The system has been disarmed/armed by the specified user before the configured time window has started
+452;Late O/C;The system has been disarmed/armed by the specified user after the configured time window has ended
+453;Failed to Open;The system has failed to have been disarmed during the designated time window
+454;Failed to Close;The system has failed to be armed during the designated time window
+455;Auto-arm Failed;The system has failed to automatically arm itself at the designated time
+456;Partial Arm;The system has been only partially armed by the specified user
+457;Exit Error (user);The specified user has made an error exiting the premises after arming the system
+458;User on Premises;A user has disarmed the system after an alarm has occurred
+459;Recent Close;The system had been armed within the last xx minutes
+461;Wrong Code Entry; 
+462;Legal Code Entry; 
+463;Re-arm after Alarm; 
+464;Auto-arm Time Extended;A user has successfully requested that the system delay automatically arming
+465;Panic Alarm Reset;The specified panic zone has been reset
+466;Service On/Off Premises;A service person has entered or left the premises
+501;Access reader disable;The credential reader on the specified access point has been disabled
+520;Sounder/Relay Disable;The specified sounder or relay has been disabled
+521;Bell 1 disable;The specified output for Bell 1 has been disabled
+522;Bell 2 disable;The specified output for Bell 2 has been disabled
+523;Alarm relay disable;The specified alarm relay has been disabled
+524;Trouble relay disable;The specified trouble relay has been disabled
+525;Reversing relay disable;The specified reversing relay has been disabled
+526;Notification Appliance Ckt. # 3 disable;The specified output for Bell 3 has been disabled
+527;Notification Appliance Ckt. # 4 disable;The specified output for Bell 4 has been disabled
+531;Module Added;The specified access control module has been added to the system
+532;Module Removed;The specified access control module has been removed from the system
+551;Dialer disabled;The specified dialer has been disabled
+552;Radio transmitter disabled;The specified radio transmitter has been disabled
+553;Remote Upload/Download disabled;Remote configuration has been enabled
+570;Zone/Sensor bypass;The specified zone or sensor has been bypassed
+571;Fire bypass;The specified fire zone has been bypassed
+572;24 Hour zone bypass;The specified 24 hour zone has been bypassed
+573;Burg. Bypass;The specified burglary zone has been bypassed
+574;Group bypass;A group of zones has been bypassed
+575;Swinger bypass;The specified zone which has reported an excessive number of faults/restores in a short period of time has been bypassed
+576;Access zone shunt;The specified zone in the access control system has been shunted and will no longer report activity
+577;Access point bypass;The specified access point in the access control system has been bypassed and will allow the door to open(unsecured)
+578;Vault Bypass;The specified vault zone has been bypassed
+579;Vent Zone Bypass;The specified vent zone has been bypassed and will no longer report any activity
+601;Manual trigger test report;A test report has been triggered manually
+602;Periodic test report;A periodic test report has been triggered
+603;Periodic RF transmission;A periodic RF path test report has been triggered
+604;Fire test;The specified user has initiated a test of the fire alarm zones
+605;Status report to follow; 
+606;Listen-in to follow;The system is about to activate a 2-way audio session
+607;Walk test mode;The specified user has placed the system into the walk-test mode for testing purposes
+608;Periodic test - System Trouble Present;A periodic test has been triggered but the fire system has a trouble condition present
+609;Video Xmitter active;A video look-in session is about to begin
+611;Point tested OK;The specified point tested successfully
+612;Point not tested;The specified point has not been tested
+613;Intrusion Zone Walk Tested;The specified intrusion zone has been successfully walk-tested
+614;Fire Zone Walk Tested;The specified fire zone has been successfully walk-tested
+615;Panic Zone Walk Tested;The specified panic zone has been successfully walk-tested
+616;Service Request;A request has been made for system servicing
+621;Event Log reset;The event log has been reset and all stored events have been discarded
+622;Event Log 50% full;The event log is 50% full
+623;Event Log 90% full;The event log is 90% full
+624;Event Log overflow;The event log has overflowed and events have been lost
+625;Time/Date reset;The time and date have been reset to a new value by the specified user
+626;Time/Date inaccurate;The system time and date is known to be in error
+627;Program mode entry;The system has been placed into program mode
+628;Program mode exit;The system has exited program mode
+629;32 Hour Event log marker;In the last 31.9 hours (1 and 1/3 days), nothing has been posted to the event log. There is nothing new toread. Does not send to central station and only occurs in the Vista-20/SE and FA sister products.
+630;Schedule change;The specified fire/burglary schedule has been changed
+631;Exception schedule change;The time schedule for event reporting by exception has been changed
+632;Access schedule change;The specified access control schedule has been changed
+641;Senior Watch Trouble;A person has not activated a motion sensor in a specified period
+642;Latch-key Supervision;A child has disarmed the system (after school)
+651;Reserved for Ademco Use; 
+652;Reserved for Ademco Use; 
+653;Reserved for Ademco Use; 
+654;System Inactivity;System has not been operated for x days
+655;User Code X modified by Installer;The Installer has modified the specified Users code
+703;Auxiliary #3;
+704;Installer Test;
+750;User Assigned CID Message;
+751;User Assigned CID Message;
+752;User Assigned CID Message;
+753;User Assigned CID Message;
+754;User Assigned CID Message;
+755;User Assigned CID Message;
+756;User Assigned CID Message;
+757;User Assigned CID Message;
+758;User Assigned CID Message;
+759;User Assigned CID Message;
+760;User Assigned CID Message;
+761;User Assigned CID Message;
+762;User Assigned CID Message;
+763;User Assigned CID Message;
+764;User Assigned CID Message;
+765;User Assigned CID Message;
+766;User Assigned CID Message;
+767;User Assigned CID Message;
+768;User Assigned CID Message;
+769;User Assigned CID Message;
+770;User Assigned CID Message;
+771;User Assigned CID Message;
+772;User Assigned CID Message;
+773;User Assigned CID Message;
+774;User Assigned CID Message;
+775;User Assigned CID Message;
+776;User Assigned CID Message;
+777;User Assigned CID Message;
+778;User Assigned CID Message;
+779;User Assigned CID Message;
+780;User Assigned CID Message; 
+781;User Assigned CID Message; 
+782;User Assigned CID Message; 
+783;User Assigned CID Message; 
+784;User Assigned CID Message; 
+785;User Assigned CID Message; 
+786;User Assigned CID Message; 
+787;User Assigned CID Message; 
+788;User Assigned CID Message; 
+789;User Assigned CID Message; 
+796;Unable to output signal (Derived Channel; 
+798;STU Controller down (Derived Channel); 
+900;Download Abort;The specified Downloader ID has aborted a download sequence in progress
+901;Download Start/End;Downloader has started or ended a download sequence to the panel
+902;Download Interrupted;A download sequence has been interrupted
+910;Auto-close with Bypass;An auto-close sequence has been started and the specified zone has been bypassed
+911;Bypass Closing; 
+912;Fire Alarm Silence;The fire alarm has been silenced
+913;Supervisory Point test Start/End;A fire supervisory device has been tested
+914;Hold-up test Start/End;The specified user has started or ended a hold-up test
+915;Burg. Test Print Start/End;The printed progress of a burglary test has been started or ended
+916;Supervisory Test Print Start/End;The printed progress of a supervisory test has been started or ended
+917;Burg. Diagnostics Start/End;A burglary system diagnostic test has been started or ended
+918;Fire Diagnostics Start/End;A fire system diagnostic test has been started or ended
+919;Untyped diagnostics; 
+920;Trouble Closing (closed with burg. Durin exit); 
+921;Access Denied Code Unknown;Access has been denied because the system did not recognize the supplied access code as valid
+922;Supervisory Point Alarm;The specified supervisory point has reported an alarm condition
+923;Supervisory Point Bypass;The specified supervisory point has been bypassed
+924;Supervisory Point Trouble;The specified supervisory point has reported a trouble condition
+925;Hold-up Point Bypass;The specified hold-up point has been bypassed
+926;AC Failure for 4 hours;There has been a loss of AC power for at least four hours
+927;Output Trouble;The specified output has reported a trouble condition
+928;User code for event;This message contains the ID of the user who triggered the previous event
+929;Log-off;The specified user has logged-off of the system
+954;Communication Failure;Comm fail to the primary (zone 951) or secondary (zone 952) 7810iR-ent in private LAN mode
+999;1 and 1/3 Day No Read Log;In the last 31.9 hours (1 and 1/3 days), nothing has been posted to the event log. There is nothing new toread. Does not send to central station and only occurs in the Vista-20/SE and FA sister products.

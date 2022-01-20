@@ -40,6 +40,8 @@ import random, string, base64
 from homeassistant.helpers.event import async_track_point_in_utc_time
 from homeassistant.util.dt import utcnow
 
+import cidcodes
+
 DOMAIN = 'garnet'
 CONF_HUBS = 'hubs'
 CONF_ACCOUNT = 'account'
@@ -365,15 +367,21 @@ class AlarmTCPHandler(socketserver.BaseRequestHandler):
     def handle(self):
         line = b''
         try:
-            line  = self.request[0].strip()     # Mensaje recibido
-            socket = self.request[1]            # Socket
-            
-            hasNewline = line.find(b'\n')
-            if hasNewline >= 0: 
-                line = line[hasNewline + 1:] 
-            
-            _LOGGER.debug("Received raw string (ASCII): " + line.decode(errors='replace'))     
+           
+            line  = self.request[0]     # Mensaje recibido
+            socket = self.request[1]    # Socket
+
+            _LOGGER.debug("-----------------------------------------------------------------------------------")     
+            _LOGGER.debug("Received raw string (ASCII): " + line.decode(errors='replace').replace('\r','\\r').replace('\n','\\n'))     
             _LOGGER.debug("                    (bytes): " + format(binascii.hexlify(line)))
+ 
+            if line[0]  == 10 :
+                line = line[1:]
+                
+            if line[len(line) - 1]  == 13 :
+                line = line[0:len(line) - 1]
+            
+            _LOGGER.debug("           stripped (bytes): " + format(binascii.hexlify(line)))
 
             # Se obtiene el account ID
             accountId = line[line[3:].index(b'#') + 4: line[3:].index(b'[') + 3].decode(errors='replace')
@@ -385,12 +393,12 @@ class AlarmTCPHandler(socketserver.BaseRequestHandler):
             inputMessage = line[pos:]
             _LOGGER.debug("Stripped message: " + inputMessage.decode(errors='replace') )
             
-            msgcrc = int.from_bytes(line[0:2], byteorder='big', signed=False) # Se obtiene el CRC del mensaje
-            codecrc = str.encode(AlarmTCPHandler.CRCCalc(inputMessage))    # Se calcula el CRC a partir del mensaje
+            msgcrc = binascii.hexlify(line[0:2]).upper().decode(errors='replace')   # Se obtiene el CRC del mensaje
+            codecrc = AlarmTCPHandler.CRCCalc(inputMessage)                         # Se calcula el CRC a partir del mensaje
       
             try:
-                if msgcrc != int(codecrc.decode(errors='replace'),16):
-                    raise Exception('CRC mismatch! Expected ' +  str(msgcrc) + " but calculated " + codecrc.decode(errors='replace'))            
+                if msgcrc != codecrc:
+                    raise Exception('CRC mismatch! Expected ' +  msgcrc + " but calculated " + codecrc)            
                 if(accountId not in hass_platform.data[DOMAIN]):
                     raise Exception('Not supported account ' + accountId)
                 
