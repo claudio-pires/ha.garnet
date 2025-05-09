@@ -46,9 +46,9 @@ class GarnetAPI:
     def __sia_client(self, message: str = "", partition: int = 0, zone: int = 0, user: int = 0, action: siacode = siacode.none, keepalive: bool = False) -> None:
         """Funcion que recibe notificaciones del cliente. No debe ser bloqueante"""
 
-        _LOGGER.info("message: " + message +", partition: "+str(partition)+", zone: "+str(zone)+", user: "+str(user)+", action: "+str(action)+", keepalive: "+str(keepalive)+"")
+        _LOGGER.debug("message: " + message +", partition: "+str(partition)+", zone: "+str(zone)+", user: "+str(user)+", action: "+str(action)+", keepalive: "+str(keepalive)+"")
         if(keepalive):
-            _LOGGER.info("Keepalive")
+            _LOGGER.debug("Keepalive")
             # TODO: resetear un contador
         else:
             if(action == siacode.none):

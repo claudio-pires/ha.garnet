@@ -128,9 +128,9 @@ class GarnetIntConfigFlow(ConfigFlow, domain=DOMAIN):
             step_id="reconfigure",
             data_schema=vol.Schema(
                 {
-                    vol.Required(
-                        CONF_GARNETUSER, default=config_entry.data[CONF_GARNETUSER]
-                    ): str,
+#                    vol.Required(
+#                        CONF_GARNETUSER, default=config_entry.data[CONF_GARNETUSER]
+#                    ): str,
                     vol.Required(
                         CONF_GARNETPASS, default=config_entry.data[CONF_GARNETPASS]
                     ): str,
