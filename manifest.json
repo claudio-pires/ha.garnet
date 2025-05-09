@@ -1,5 +1,5 @@
 {
-  "domain": "ha.garnet",
+  "domain": "garnet",
   "name": "Garnet Panel Integration",
   "codeowners": ["@claudio-pires"],
   "config_flow": true,
