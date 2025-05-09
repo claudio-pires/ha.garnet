@@ -10,7 +10,7 @@ from homeassistant.core import DOMAIN, HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
 from .api import API, APIAuthError, Device, DeviceType
-from .const import CONF_CLIENT, CONF_ZONES, DEFAULT_SCAN_INTERVAL
+from .const import CONF_ACCOUNT, CONF_GARNETUSER, CONF_GARNETPASS, DEFAULT_SCAN_INTERVAL
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -22,7 +22,6 @@ class ExampleAPIData:
     controller_name: str
     devices: list[Device]
 
-
 class GarnetIntCoordinator(DataUpdateCoordinator):
     """My example coordinator."""
 
@@ -32,10 +31,9 @@ class GarnetIntCoordinator(DataUpdateCoordinator):
         """Initialize coordinator."""
 
         # Set variables from values entered in config flow setup
-        self.client = config_entry.data[CONF_CLIENT]
-        self.zones = config_entry.data[CONF_ZONES]
-        _LOGGER.info(self.client )
-        _LOGGER.info(self.zones )
+        self.account = config_entry.data[CONF_ACCOUNT]
+        self.user = config_entry.data[CONF_GARNETUSER]
+        self.passw = config_entry.data[CONF_GARNETPASS]
 
         # set variables from options.  You need a default here incase options have not been set
         self.poll_interval = config_entry.options.get(
@@ -55,7 +53,7 @@ class GarnetIntCoordinator(DataUpdateCoordinator):
         )
 
         # Initialise your api here
-        self.api = API(client=self.client, zones=self.zones)
+        self.api = API(account=self.account, user=self.user, passw=self.passw)
 
     async def async_update_data(self):
         """Fetch data from API endpoint.

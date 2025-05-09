@@ -1,4 +1,4 @@
-from garnetapi.enums import arm_modes, zonestatus, emergencytype
+from .enums import arm_modes, zonestatus, emergencytype
 
 class Panel():
     """Encapsula datos del panel."""

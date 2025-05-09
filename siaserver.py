@@ -1,10 +1,11 @@
-from dummy.test_logging import logging 
+
 import threading
 import socket
 import time
-from garnetapi.siadata import SIAData
-from garnetapi.const import *
-from garnetapi.enums import siacode
+from .siadata import SIAData
+from .const import *
+from .enums import siacode
+import logging
 
 
 _LOGGER = logging.getLogger(__name__)

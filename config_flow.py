@@ -19,11 +19,12 @@ from homeassistant.exceptions import HomeAssistantError
 
 from .api import API, APIConnectionError
 from .const import (
-    CONF_CLIENT,
-    CONF_ZONES,
-    DEFAULT_SCAN_INTERVAL,
     DOMAIN,
+    CONF_ACCOUNT,
+    CONF_GARNETUSER,
+    CONF_GARNETPASS,
     MIN_SCAN_INTERVAL,
+    DEFAULT_SCAN_INTERVAL
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -31,8 +32,9 @@ _LOGGER = logging.getLogger(__name__)
 
 STEP_USER_DATA_SCHEMA = vol.Schema(
     {
-        vol.Required(CONF_CLIENT, description={"suggested_value": "#0001"}): str,
-        vol.Required(CONF_ZONES, description={"suggested_value": "6"}): str,
+        vol.Required(CONF_GARNETUSER): str,
+        vol.Required(CONF_GARNETPASS): str,
+        vol.Required(CONF_ACCOUNT, description={"suggested_value": "#0001"}): str,
     }
 )
 
@@ -43,12 +45,12 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str,
     Data has the keys from STEP_USER_DATA_SCHEMA with values provided by the user.
     """
     _LOGGER.error("**** validate_input")
-    api = API(data[CONF_CLIENT], data[CONF_ZONES])
+    api = API(data[CONF_GARNETUSER], data[CONF_GARNETPASS], data[CONF_ACCOUNT])
     try:
         await hass.async_add_executor_job(api.connect)
     except APIConnectionError as err:
         raise CannotConnect from err
-    return {"title": f"Garnet Panel Integration - {data[CONF_CLIENT]}"}
+    return {"title": f"Garnet Panel Integration - {data[CONF_ACCOUNT]}"}
 
 
 class GarnetIntConfigFlow(ConfigFlow, domain=DOMAIN):
@@ -106,7 +108,7 @@ class GarnetIntConfigFlow(ConfigFlow, domain=DOMAIN):
 
         if user_input is not None:
             try:
-                user_input[CONF_CLIENT] = config_entry.data[CONF_CLIENT]
+                user_input[CONF_ACCOUNT] = config_entry.data[CONF_ACCOUNT]
                 await validate_input(self.hass, user_input)
             except CannotConnect:
                 errors["base"] = "cannot_connect"
@@ -127,7 +129,10 @@ class GarnetIntConfigFlow(ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema(
                 {
                     vol.Required(
-                        CONF_ZONES, default=config_entry.data[CONF_ZONES]
+                        CONF_GARNETUSER, default=config_entry.data[CONF_GARNETUSER]
+                    ): str,
+                    vol.Required(
+                        CONF_GARNETPASS, default=config_entry.data[CONF_GARNETPASS]
                     ): str,
                 }
             ),

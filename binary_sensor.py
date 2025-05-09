@@ -70,9 +70,9 @@ class ExampleBinarySensor(CoordinatorEntity, BinarySensorEntity):
         # If your device is created elsewhere, you can just specify the indentifiers parameter.
         # If your device connects via another device, add via_device parameter with the indentifiers of that device.
         return DeviceInfo(
-            name=f"ExampleDevice{self.device.device_id}",
-            manufacturer="ACME Manufacturer",
-            model="Door&Temp v1",
+            name=self.device.name,
+            manufacturer="",
+            model="",
             sw_version="1.0",
             identifiers={
                 (

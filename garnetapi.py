@@ -1,12 +1,12 @@
 import http.client
 import json
 import time
+import logging
 
-from garnetapi.enums import arm_modes, zonestatus, emergencytype, siacode
-from garnetapi.data import Zone, Partition, Panel, User
-from garnetapi.siaserver import MessageServer
-from dummy.test_logging import logging 
-from garnetapi.const import *
+from .enums import arm_modes, zonestatus, emergencytype, siacode
+from .data import Zone, Partition, Panel, User
+from .siaserver import MessageServer
+from .const import *
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -46,9 +46,9 @@ class GarnetAPI:
     def __sia_client(self, message: str = "", partition: int = 0, zone: int = 0, user: int = 0, action: siacode = siacode.none, keepalive: bool = False) -> None:
         """Funcion que recibe notificaciones del cliente. No debe ser bloqueante"""
 
-        _LOGGER.debug("message: " + message +", partition: "+str(partition)+", zone: "+str(zone)+", user: "+str(user)+", action: "+str(action)+", keepalive: "+str(keepalive)+"")
+        _LOGGER.info("message: " + message +", partition: "+str(partition)+", zone: "+str(zone)+", user: "+str(user)+", action: "+str(action)+", keepalive: "+str(keepalive)+"")
         if(keepalive):
-            _LOGGER.debug("Keepalive")
+            _LOGGER.info("Keepalive")
             # TODO: resetear un contador
         else:
             if(action == siacode.none):
@@ -85,6 +85,13 @@ class GarnetAPI:
         if(self.seq == 256): self.seq = 0
         return str(self.seq).zfill(3)
 
+    def get_enabled_zones(self):
+        """Devuelve solo las zonas activas"""
+        return [
+                zone
+                for zone in self.zones
+                if zone.enabled
+            ]
 
     def __login(self) -> None:
         """Obtiene token de sesion y configuraciones iniciales."""
