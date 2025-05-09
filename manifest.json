@@ -1,9 +1,15 @@
 {
-  "domain": "garnet",
-  "name": "Garnet",
-  "documentation": "",
-  "dependencies": [],
-  "version": "1.0.0",
+  "domain": "ha.garnet",
+  "name": "Garnet Panel Integration",
   "codeowners": ["@claudio-pires"],
-  "requirements": []
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/claudio-pires/ha.garnet",
+  "homekit": {},
+  "iot_class": "local_polling",
+  "requirements": [],
+  "single_config_entry": false,
+  "ssdp": [],
+  "version": "1.0.1",
+  "zeroconf": []
 }

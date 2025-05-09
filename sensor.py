@@ -2,10 +2,12 @@
 
 import logging
 
-from homeassistant.components.binary_sensor import (
-    BinarySensorDeviceClass,
-    BinarySensorEntity,
+from homeassistant.components.sensor import (
+    SensorDeviceClass,
+    SensorEntity,
+    SensorStateClass,
 )
+from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -19,26 +21,29 @@ from .coordinator import GarnetIntCoordinator
 _LOGGER = logging.getLogger(__name__)
 
 
-async def async_setup_entry(hass: HomeAssistant, config_entry: MyConfigEntry, async_add_entities: AddEntitiesCallback):
-    """Set up the Binary Sensors."""
-    _LOGGER.error("**** async_setup_entry")
+async def async_setup_entry(
+    hass: HomeAssistant,
+    config_entry: MyConfigEntry,
+    async_add_entities: AddEntitiesCallback,
+):
+    """Set up the Sensors."""
     # This gets the data update coordinator from the config entry runtime data as specified in your __init__.py
     coordinator: GarnetIntCoordinator = config_entry.runtime_data.coordinator
 
-    # Enumerate all the binary sensors in your data value from your DataUpdateCoordinator and add an instance of your binary sensor class
+    # Enumerate all the sensors in your data value from your DataUpdateCoordinator and add an instance of your sensor class
     # to a list for each one.
     # This maybe different in your specific case, depending on how your data is structured
-    binary_sensors = [
-        ExampleBinarySensor(coordinator, device)
+    sensors = [
+        ExampleSensor(coordinator, device)
         for device in coordinator.data.devices
-        if device.device_type == DeviceType.TAMPER
+        if device.device_type == DeviceType.TEMP_SENSOR
     ]
 
-    # Create the binary sensors.
-    async_add_entities(binary_sensors)
+    # Create the sensors.
+    async_add_entities(sensors)
 
 
-class ExampleBinarySensor(CoordinatorEntity, BinarySensorEntity):
+class ExampleSensor(CoordinatorEntity, SensorEntity):
     """Implementation of a sensor."""
 
     def __init__(self, coordinator: GarnetIntCoordinator, device: Device) -> None:
@@ -60,8 +65,8 @@ class ExampleBinarySensor(CoordinatorEntity, BinarySensorEntity):
     @property
     def device_class(self) -> str:
         """Return device class."""
-        # https://developers.home-assistant.io/docs/core/entity/binary-sensor#available-device-classes
-        return BinarySensorDeviceClass.DOOR
+        # https://developers.home-assistant.io/docs/core/entity/sensor/#available-device-classes
+        return SensorDeviceClass.TEMPERATURE
 
     @property
     def device_info(self) -> DeviceInfo:
@@ -88,10 +93,22 @@ class ExampleBinarySensor(CoordinatorEntity, BinarySensorEntity):
         return self.device.name
 
     @property
-    def is_on(self) -> bool | None:
-        """Return if the binary sensor is on."""
-        # This needs to enumerate to true or false
-        return self.device.state
+    def native_value(self) -> int | float:
+        """Return the state of the entity."""
+        # Using native value and native unit of measurement, allows you to change units
+        # in Lovelace and HA will automatically calculate the correct value.
+        return float(self.device.state)
+
+    @property
+    def native_unit_of_measurement(self) -> str | None:
+        """Return unit of temperature."""
+        return UnitOfTemperature.CELSIUS
+
+    @property
+    def state_class(self) -> str | None:
+        """Return state class."""
+        # https://developers.home-assistant.io/docs/core/entity/sensor/#available-state-classes
+        return SensorStateClass.MEASUREMENT
 
     @property
     def unique_id(self) -> str:
